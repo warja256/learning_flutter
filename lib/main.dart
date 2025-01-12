@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/adaptive.dart';
+import 'package:learning_flutter/chooseImg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final List<Widget> _screens = [
     const Adaptive(title: 'Adaptive'), // Основной экран
-    Center(child: Text('Экран 2')),
+    const ChooseImg(title: 'Pick Your Image'),
     Center(child: Text('Экран 3')),
   ];
 
@@ -53,11 +54,11 @@ class _MyHomePageState extends State<MyHomePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Главная',
+            label: 'Адаптив',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Поиск',
+            label: 'Выбор',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),

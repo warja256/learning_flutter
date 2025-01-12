@@ -18,11 +18,15 @@ class _AdaptiveState extends State<Adaptive> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: SafeArea(child: LayoutBuilder(builder: (context, constraits) {
         final flag = constraits.maxHeight > constraits.maxWidth;
         if (flag) {
           return Column(
             children: [
+              SizedBox(
+                height: 20,
+              ),
               Expanded(
                 // ПРИМЕР РАБОТЫ GridView
                 child: GridView.builder(
