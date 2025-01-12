@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Adaptive extends StatefulWidget {
@@ -37,9 +38,59 @@ class _AdaptiveState extends State<Adaptive> {
                     'asset/jpeg/flower.jpeg',
                     'asset/jpeg/discoball.jpeg',
                   ];
-                  return Image.asset(
-                    images[index],
-                    fit: BoxFit.cover,
+                  return GestureDetector(
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return Dialog(
+                              child: Container(
+                            width: 200,
+                            height: 150,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text(
+                                  'Вы нажали на фото!',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: CupertinoColors.black,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 25,
+                                ),
+                                Align(
+                                    alignment: Alignment.bottomRight,
+                                    child: Padding(
+                                      padding: EdgeInsets.only(right: 20),
+                                      child: GestureDetector(
+                                        onTap: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text(
+                                          'Закрыть',
+                                          style: TextStyle(
+                                            color: CupertinoColors.black,
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                      ),
+                                    ))
+                              ],
+                            ),
+                          ));
+                        },
+                      );
+                    },
+                    child: Image.asset(
+                      images[index],
+                      fit: BoxFit.cover,
+                    ),
                   );
                 },
               ),
