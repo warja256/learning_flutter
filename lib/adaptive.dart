@@ -26,9 +26,6 @@ class _AdaptiveState extends State<Adaptive> {
               padding: EdgeInsets.only(top: 20, left: 20, right: 20),
               child: Column(
                 children: [
-                  SizedBox(
-                    height: 20,
-                  ),
                   Expanded(
                     // ПРИМЕР РАБОТЫ GridView
                     child: GridView.builder(
