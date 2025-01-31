@@ -69,25 +69,30 @@ class FavouritePets extends StatelessWidget {
                             SizedBox(width: 10),
                             FavPet('Rocky', '2', 'Corgi', 'asset/svg/dog.svg',
                                 isPortrait),
-                            SizedBox(width: 10),
-                            FavPet('Bella', '3', 'Siamese',
-                                'asset/svg/cat2.svg', isPortrait),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
+                            FavPet('Bella', '3', 'Siamese',
+                                'asset/svg/cat2.svg', isPortrait),
+                            SizedBox(width: 10),
                             FavPet('Max', '5', 'Labrador', 'asset/svg/dog2.svg',
                                 isPortrait),
-                            SizedBox(width: 10),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
                             FavPet('Daisy', '1', 'Holstein',
                                 'asset/svg/cow.svg', isPortrait),
                             SizedBox(width: 10),
                             FavPet('Croc', '7', 'Nile Crocodile',
                                 'asset/svg/crocodile.svg', isPortrait),
                           ],
-                        ),
+                        )
                       ],
                     ),
             );
