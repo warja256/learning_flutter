@@ -14,7 +14,7 @@ class ChooseImg extends StatefulWidget {
 
 class _ChooseImgState extends State<ChooseImg> {
   // Список для отслеживания фокуса для каждой картинки
-  List<bool> _focusedList = [
+  final List<bool> _focusedList = [
     false,
     false,
     false,

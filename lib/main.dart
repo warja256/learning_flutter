@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/adaptive.dart';
 import 'package:learning_flutter/chooseImg.dart';
+import 'package:learning_flutter/favourite.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _screens = [
     const Adaptive(title: 'Adaptive'), // Основной экран
     const ChooseImg(title: 'Pick Your Image'),
-    Center(child: Text('Экран 3')),
+    const FavouritePets(title: 'Favourite Pets')
   ];
 
   void _onItemTapped(int index) {
