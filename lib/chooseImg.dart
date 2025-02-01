@@ -40,7 +40,7 @@ class _ChooseImgState extends State<ChooseImg> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      backgroundColor: Theme.of(context).colorScheme.primary,
+      backgroundColor: Theme.of(context).colorScheme.surfaceTint,
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
@@ -80,8 +80,6 @@ class _ChooseImgState extends State<ChooseImg> {
                               },
                               child: FocusableActionDetector(
                                 onShowFocusHighlight: (focused) =>
-                                    _setFocused(index),
-                                onShowHoverHighlight: (focused) =>
                                     _setFocused(index),
                                 child: Container(
                                   decoration: BoxDecoration(

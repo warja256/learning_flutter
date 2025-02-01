@@ -72,6 +72,9 @@ flutter:
     - asset/svg/dog2.svg
     - asset/svg/crocodile.svg
 
+    - asset/png/patDog.jpg
+    - asset/png/pat.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
