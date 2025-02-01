@@ -34,6 +34,9 @@ class FavouritePets extends StatelessWidget {
                                 isPortrait),
                           ],
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -44,6 +47,9 @@ class FavouritePets extends StatelessWidget {
                             FavPet('Max', '5', 'Labrador', 'asset/svg/dog2.svg',
                                 isPortrait),
                           ],
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -121,6 +127,7 @@ class FavPet extends StatelessWidget {
             width: 180,
             height: 270,
             child: Card(
+              color: Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -139,7 +146,7 @@ class FavPet extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -148,7 +155,8 @@ class FavPet extends StatelessWidget {
                             child: Text(
                               name,
                               textAlign: TextAlign.center,
-                              style: const TextStyle(fontSize: 18),
+                              style: const TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w600),
                             ),
                           ),
                           Flexible(
@@ -174,6 +182,7 @@ class FavPet extends StatelessWidget {
             width: 360,
             height: 190,
             child: Card(
+              color: Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -201,7 +210,8 @@ class FavPet extends StatelessWidget {
                             child: Text(
                               name,
                               textAlign: TextAlign.start,
-                              style: const TextStyle(fontSize: 18),
+                              style: const TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w600),
                             ),
                           ),
                           Flexible(
