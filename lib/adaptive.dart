@@ -17,8 +17,12 @@ class _AdaptiveState extends State<Adaptive> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
+        titleTextStyle: TextStyle(
+            color: Theme.of(context).colorScheme.inverseSurface,
+            fontSize: 24,
+            fontWeight: FontWeight.w500),
       ),
-      backgroundColor: Theme.of(context).colorScheme.primary,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(child: LayoutBuilder(builder: (context, constraits) {
         final flag = constraits.maxHeight > constraits.maxWidth;
         if (flag) {
@@ -57,7 +61,7 @@ class _AdaptiveState extends State<Adaptive> {
                               context: context,
                               builder: (context) {
                                 return Dialog(
-                                    child: Container(
+                                    child: SizedBox(
                                   width: 200,
                                   height: 150,
                                   child: Column(
@@ -100,9 +104,12 @@ class _AdaptiveState extends State<Adaptive> {
                               },
                             );
                           },
-                          child: Image.asset(
-                            images[index],
-                            fit: BoxFit.cover,
+                          child: Material(
+                            elevation: 8,
+                            child: Image.asset(
+                              images[index],
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         );
                       },
@@ -146,7 +153,7 @@ class _AdaptiveState extends State<Adaptive> {
                               context: context,
                               builder: (context) {
                                 return Dialog(
-                                    child: Container(
+                                    child: SizedBox(
                                   width: 200,
                                   height: 150,
                                   child: Column(

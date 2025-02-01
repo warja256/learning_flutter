@@ -32,6 +32,10 @@ class _PatState extends State<Pat> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
+        titleTextStyle: TextStyle(
+            color: Theme.of(context).colorScheme.inverseSurface,
+            fontSize: 24,
+            fontWeight: FontWeight.w500),
       ),
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(

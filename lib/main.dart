@@ -50,51 +50,36 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _screens[_currentIndex], // Отображаем текущий экран
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex, // Устанавливаем текущий индекс вкладки
-        onTap: _onItemTapped, // Обработчик нажатия на вкладку
-        selectedItemColor:
-            Colors.deepPurple, // Цвет выбранного элемента (текст и иконки)
-        unselectedItemColor: Colors.deepPurple, // Цвет невыбранного элемента
-        selectedLabelStyle: TextStyle(
-          fontWeight: FontWeight.bold, // Жирный текст для выбранного
-          color: Colors.deepPurple, // Цвет текста для выбранной вкладки
-        ),
-        unselectedLabelStyle: TextStyle(
-          color: Colors.deepPurple, // Цвет текста для невыбранной вкладки
-        ),
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              color: Colors.deepPurple, // Иконка белая
+        body: _screens[_currentIndex], // Отображаем текущий экран
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentIndex, // Текущий индекс вкладки
+          onTap: _onItemTapped, // Обработчик нажатия на вкладку
+          backgroundColor:
+              Theme.of(context).scaffoldBackgroundColor, // Фон навигации
+          selectedItemColor:
+              Theme.of(context).colorScheme.primary, // Цвет для активной иконки
+          unselectedItemColor: Theme.of(context)
+              .colorScheme
+              .onSurface
+              .withOpacity(0.6), // Цвет для неактивных иконок
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Адаптив',
             ),
-            label: 'Адаптив',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.search,
-              color: Colors.deepPurple, // Иконка белая
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'Выбор',
             ),
-            label: 'Выбор',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.favorite,
-              color: Colors.deepPurple, // Иконка белая
+            BottomNavigationBarItem(
+              icon: Icon(Icons.favorite),
+              label: 'Избранное',
             ),
-            label: 'Избранное',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.arrow_back,
-              color: Colors.deepPurple, // Иконка белая
+            BottomNavigationBarItem(
+              icon: Icon(Icons.arrow_back),
+              label: 'Погладить',
             ),
-            label: 'Погладить',
-          ),
-        ],
-      ),
-    );
+          ],
+        ));
   }
 }
